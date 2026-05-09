@@ -42,4 +42,3 @@ Since this is a client-side app, you can run it instantly:
 MIT License - Feel free to use this for educational purposes.
 
 ---
-*Built with ❤️ on Android using Spck Editor*
