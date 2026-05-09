@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E2EE Storage Demo</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 2rem auto; padding: 0 1rem; }
+        .section { border: 1px solid #ccc; padding: 1rem; margin-bottom: 1rem; border-radius: 8px; }
+        button { padding: 8px 16px; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 4px; }
+        button:disabled { background: #ccc; }
+        input, textarea { width: 100%; padding: 8px; margin: 5px 0; box-sizing: border-box; }
+        #log { background: #f4f4f4; padding: 10px; height: 150px; overflow-y: scroll; font-family: monospace; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <h1>Simple E2EE Storage</h1>
+    
+    <div class="section">
+        <h3>1. Register / Login</h3>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Master Password">
+        <button onclick="register()">Register & Generate Keys</button>
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div class="section" id="uploadSection" style="display:none;">
+        <h3>2. Upload Encrypted File</h3>
+        <input type="file" id="fileInput">
+        <button onclick="uploadFile()">Encrypt & Upload</button>
+    </div>
+
+    <div class="section" id="downloadSection" style="display:none;">
+        <h3>3. Download & Decrypt</h3>
+        <p>Encrypted Blob ID: <span id="blobId">None</span></p>
+        <button onclick="downloadFile()">Decrypt & Download</button>
+    </div>
+
+    <div class="section">
+        <h3>System Log</h3>
+        <div id="log"></div>
+    </div>
+
+    <script src="crypto.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
