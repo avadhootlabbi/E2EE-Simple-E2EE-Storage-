@@ -1,3 +1,6 @@
+# Live
+https://clever-marshmallow-c575af.netlify.app/
+
 # 🔐 Secure E2EE Cloud Storage Demo
 
 A lightweight, client-side End-to-End Encrypted (E2EE) file storage prototype built with vanilla JavaScript and the Web Crypto API. This project demonstrates how to build a "Zero-Knowledge" architecture where the server never has access to user data or encryption keys.
